@@ -1,10 +1,15 @@
 import React from 'react'
-
+import styled, { ThemeProvider } from 'styled-components'
+import { darkTheme } from './utils/Themes.js'
+import Navbar from './components/Navbar.jsx'
+import { BrowserRouter, Router } from 'react-router-dom'
 function App() {
   return (
-    <div>
-      <h1>Hello Dhruv</h1>
-    </div>
+    <ThemeProvider theme={darkTheme}>
+     <BrowserRouter>
+      <Navbar />
+      </BrowserRouter> 
+    </ThemeProvider>
   )
 }
 
